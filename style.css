@@ -168,6 +168,7 @@ picture {
   }
 
   .product {
+    margin: 2rem;
     max-width: 1048px;
     display: flex;
     flex-direction: row-reverse;
