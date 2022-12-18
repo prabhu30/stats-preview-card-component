@@ -77,14 +77,6 @@ h6 {
   overflow-wrap: break-word;
 }
 
-/*
-  9. Create a root stacking context
-*/
-#root,
-#__next {
-  isolation: isolate;
-}
-
 /* general styling */
 body {
   font-family: 'Inter', sans-serif;
@@ -107,6 +99,8 @@ article {
   max-width: 18rem;
   background-color: var(--clr-primary-700);
   border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
 
   overflow: hidden;
 }
@@ -164,4 +158,51 @@ picture {
   font-size: small;
   color: var(--clr-neutral-500);
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 600px) {
+
+  body,
+  article {
+    margin: 0;
+  }
+
+  .product {
+    max-width: 1048px;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .product__content {
+    width: 50%;
+    text-align: left;
+    padding: 4.5rem;
+  }
+
+  .product__heading {
+    font-size: 2rem;
+  }
+
+  .product__para {
+    padding-bottom: 4rem;
+  }
+
+  .product__image {
+    background-image: url(images/image-header-desktop.jpg);
+    max-height: 100%;
+    object-fit: cover;
+  }
+
+  .product__num {
+    font-size: 1.25rem;
+  }
+
+  .product__category {
+    font-size: 0.75rem;
+  }
+
+  .flex__group-two {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
